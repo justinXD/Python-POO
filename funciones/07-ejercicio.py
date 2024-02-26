@@ -1,12 +1,24 @@
 # Corregir codigo
-def es_palindromo(frase):
-    reverse = ''
-    sin_espacios = frase.lower()
-    for letra in range(len(sin_espacios)):
-        # print(sin_espacios[-1-letra])
-        reverse += sin_espacios[-1-letra]
-    print(frase, reverse)
-    return reverse.lower() == frase
+
+def sin_espacios(texto):
+    nuevo_texto = ''
+    for char in texto:
+        if char != ' ':
+            nuevo_texto += char
+    return nuevo_texto
+
+
+def reverse(texto):
+    texto_al_reves = ''
+    for char in texto:
+        texto_al_reves = char + texto_al_reves
+    return texto_al_reves
+
+
+def es_palindromo(texto):
+    texto = sin_espacios(texto)
+    texto_al_reves = reverse(texto)
+    return texto_al_reves.lower() == texto.lower()
 
 
 print(es_palindromo('Reconocer'))
