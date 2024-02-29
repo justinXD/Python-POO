@@ -26,4 +26,7 @@ def ordena(elemento):
 
 
 usuarios.sort(key=ordena)
+# Mismo codigo con funcion lambda
+# Seria el equivalente de las arrow functions de JS
+# usuarios.sort(key= lambda el: el[1])
 print(usuarios)
